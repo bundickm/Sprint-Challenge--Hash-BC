@@ -21,6 +21,7 @@ def proof_of_work(last_proof):
     start = timer()
 
     print("Searching for next proof")
+    # Choose a big number as your start and increment from there to avoid lapping/late start
     proof = random.randint(-999999999999, 999999999999)
     last_hash = hashlib.sha256(str(last_proof).encode()).hexdigest()
 
